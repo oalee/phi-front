@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+
 
  function Home() {
   return (
@@ -9,12 +9,12 @@ import styles from '../styles/Home.module.css'
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main >
-        <h1 >
+      <div className="h-screen w-screen bg-blue-500 justify-center absolute" >
+        <h1 className="box-content text-white  py-8  text-3xl   text-bold bg-yellow-500 text-center">
           Welcome to the party
         </h1>
        
-      </main>
+      </div>
 
     
     </div>
