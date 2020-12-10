@@ -8,6 +8,15 @@ const LOGIN = gql`
   }
 `;
 
+const GETME = gql`
+  query Query($verifyTokenToken: String!) {
+    verifyToken(token: $verifyTokenToken) {
+      id
+      username
+    }
+  }
+`;
+
 const GETUSERS = gql`
   query Query {
     users {
@@ -19,4 +28,4 @@ const GETUSERS = gql`
   }
 `;
 
-export { LOGIN, GETUSERS };
+export { LOGIN, GETUSERS, GETME };

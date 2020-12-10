@@ -12,6 +12,7 @@
     "antd": "^4.9.2",
     "autoprefixer": "^10.1.0",
     "graphql": "^15.4.0",
+    "js-cookie": "^2.2.1",
     "next": "10.0.3",
     "postcss": "^8.2.1",
     "react": "17.0.1",

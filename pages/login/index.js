@@ -1,12 +1,10 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import Router from "next/router";
-import client from "../../api/apollo-client";
-import { LOGIN } from "../../api/queries";
-import { Input } from "antd";
+import { LOGIN, GETME } from "../../api/queries";
 import { useForm } from "react-hook-form";
-import { data } from "autoprefixer";
 import { ApolloProvider, useQuery, useLazyQuery } from "@apollo/client";
+import Cookies from "js-cookie";
 
 function LoginPage({ client }) {
   const [creds, setCreds] = useState();
@@ -14,7 +12,12 @@ function LoginPage({ client }) {
 
   const { register, handleSubmit } = useForm();
 
-  if (data) console.log(data);
+  if (data) {
+    // console.log("data is ", data);
+    Cookies.set("auth", data.login.token, { sameSite: "strict" });
+
+    Router.push("/");
+  }
 
   const onSubmit = handleSubmit((data) => {
     console.log(data);
