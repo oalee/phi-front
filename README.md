@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+A simple admin UI with React/NextJS/TaildwindCSS for data creation and manipulation. connects to GraphQL API defined in [phi-backend](https://github.com/lrhm/phi-backend). 
 
 ## Getting Started
 
